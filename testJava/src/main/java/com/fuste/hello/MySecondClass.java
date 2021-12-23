@@ -9,6 +9,6 @@ public class MySecondClass {
 //        public: who can access
 //        static: can use method without creating new instance first
 //        void: return type of the method. Can be int, string, etc. Need this
-//        main: this is the name of the method
+//        main: this is the name of the method...this the entry point...every class need a main method
 //        (String[] args): the parameters of the method go inside the (). Need String[] args for main
     public static void main(String[] args) {System.out.println("Hello World 2!");}}
