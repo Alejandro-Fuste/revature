@@ -27,5 +27,7 @@ public class ArrayListBasics {
         myArrayList.addAll(newArrayList);
         System.out.println(myArrayList);
 
+
+
     }
 }
