@@ -18,6 +18,8 @@ public class MultiCatch {
         } catch (Exception e) {
             System.out.println("Something unexcepted happened!");
             e.printStackTrace();
+        } finally {
+            System.out.println("This will always run, even if one of the exceptions above is thrown");
         }
     }
 }
