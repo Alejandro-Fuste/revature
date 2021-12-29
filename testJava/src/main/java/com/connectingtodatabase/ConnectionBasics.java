@@ -8,7 +8,7 @@ public class ConnectionBasics {
 
     public static Connection createConnection() {
         try {
-            String dbUrl = String.format("jdbc:postgresql://%s:%s/%s?username=%s&password=%s",
+            String dbUrl = String.format("jdbc:postgresql://%s:%s/%s?user=%s&password=%s",
                     System.getenv("HOST"),
                     System.getenv("PORT"),
                     System.getenv("DB"),
