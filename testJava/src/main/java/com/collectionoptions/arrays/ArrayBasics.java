@@ -9,10 +9,10 @@ import java.util.Date;
 
 public class ArrayBasics {
     public static void main(String[] args) throws ParseException {
-//        int[] myArray = new int[]{1,2,3,4,5};
-//        for(int x: myArray){
-//            System.out.println(x);
-//        }
+        int[] myArray = new int[]{1,2,3,4,5};
+        for(int x: myArray){
+            System.out.println(x);
+        }
 //
 //        System.out.println();
 //
