@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class simpleInputPOM {
+public class SimpleInputPOM {
 
     private WebDriver webDriver;
 
-    public simpleInputPOM(WebDriver webDriver) {
+    public SimpleInputPOM(WebDriver webDriver) {
         this.webDriver = webDriver;
 
         PageFactory.initElements(webDriver, this);
