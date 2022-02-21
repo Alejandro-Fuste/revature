@@ -23,6 +23,8 @@ public class CheckboxPOM {
     @FindBy(id = "txtAge")
     public WebElement hiddenSuccessMessage;
 
-    @FindBy()
-    public WebElement
+    // ------------------- Multiple Checkbox Fields --------------------------------
+
+    @FindBy(id = "check1")
+    public WebElement checkboxButton;
 }
