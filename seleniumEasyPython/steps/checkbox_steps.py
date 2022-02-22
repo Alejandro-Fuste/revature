@@ -3,7 +3,7 @@ from behave import Given, When, Then
 
 @When(u'the developer clicks on single check box')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When the developer clicks on single check box')
+    context.
 
 
 @Then(u'a success message pops up on the screen')
