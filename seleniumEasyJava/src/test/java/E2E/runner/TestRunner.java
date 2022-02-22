@@ -1,6 +1,7 @@
 package E2E.runner;
 
 import E2E.poms.simpleInput.SimpleInputPOM;
+import E2E.poms.checkbox.CheckboxPOM;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -24,6 +25,7 @@ public class TestRunner {
 
     // POMS
     public static SimpleInputPOM simpleInputPage;
+    public static CheckboxPOM checkboxPage;
 
     @BeforeClass
     public static void setup() {
@@ -34,6 +36,7 @@ public class TestRunner {
 
         // assign POMs
         simpleInputPage = new SimpleInputPOM(driver);
+        checkboxPage = new CheckboxPOM(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(3));
