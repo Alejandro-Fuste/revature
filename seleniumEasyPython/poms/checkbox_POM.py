@@ -19,6 +19,28 @@ class CheckboxPOM:
 
     # ------------------- Multiple Checkbox Fields --------------------------------
 
+    def checkbox_1(self):
+        element: WebElement = self.driver.find_element(By.XPATH,
+                                                       '//*[@id="easycont"]/div/div[2]/div[2]/div[2]/div[1]/label'
+                                                       '/input')
+        return element
+
+    def checkbox_2(self):
+        element: WebElement = self.driver.find_element(By.XPATH,
+                                                       '//*[@id="easycont"]/div/div[2]/div[2]/div[2]/div[2]/label'
+                                                       '/input')
+        return element
+
+    def checkbox_3(self):
+        element: WebElement = self.driver.find_element(By.XPATH, '//*[@id="easycont"]/div/div[2]/div[2]/div[2]/div[3]'
+                                                                 '/label/input')
+        return element
+
+    def checkbox_4(self):
+        element: WebElement = self.driver.find_element(By.XPATH, '//*[@id="easycont"]/div/div[2]/div[2]/div[2]/div[4]'
+                                                                 '/label/input')
+        return element
+
     def checkbox_button(self):
         element: WebElement = self.driver.find_element(By.ID, "check1")
         return element

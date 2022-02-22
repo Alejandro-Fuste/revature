@@ -32,7 +32,6 @@ def message_displayed(context):
     element = WebDriverWait(context.driver, 4).until(
         expected_conditions.text_to_be_present_in_element((By.ID, "display"),
                                                           "I entered this message with Selenium."))
-    # assert element.text == "I entered this message with Selenium."
     assert element
 
 
@@ -57,5 +56,4 @@ def total_displayed(context):
     element = WebDriverWait(context.driver, 4).until(
         expected_conditions.text_to_be_present_in_element((By.ID, "displayvalue"),
                                                           "4"))
-    # assert element.text == "4"
     assert element
