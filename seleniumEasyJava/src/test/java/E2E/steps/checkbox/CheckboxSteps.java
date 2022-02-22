@@ -1,9 +1,15 @@
 package E2E.steps.checkbox;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CheckboxSteps {
+    @Given("the developer is on the checkbox demo selenium easy website")
+    public void theDeveloperIsOnTheCheckboxDemoSeleniumEasyWebsite() {
+    }
+
+//    ------------------- Single Checkbox --------------------------------
     @When("the developer clicks on single check box")
     public void theDeveloperClicksOnSingleCheckBox() {
     }
@@ -12,19 +18,14 @@ public class CheckboxSteps {
     public void aSuccessMessagePopsUpOnTheScreen() {
     }
 
-    @When("the developer clicks on first check box")
-    public void theDeveloperClicksOnFirstCheckBox() {
+//    ------------------- Multiple Checkboxes --------------------------------
+
+    @When("the developer clicks on the check all button")
+    public void theDeveloperClicksOnTheCheckAllButton() {
     }
 
-    @When("the developer clicks on second check box")
-    public void theDeveloperClicksOnSecondCheckBox() {
+    @Then("all the checkboxes get checked")
+    public void allTheCheckboxesGetChecked() {
     }
 
-    @When("the developer clicks on third check box")
-    public void theDeveloperClicksOnThirdCheckBox() {
-    }
-
-    @Then("the button text changes")
-    public void theButtonTextChanges() {
-    }
 }
