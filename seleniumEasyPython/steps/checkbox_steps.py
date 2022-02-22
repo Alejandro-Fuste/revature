@@ -41,7 +41,12 @@ def click_checkbox_3(context):
     context.checkbox.checkbox_3().click()
 
 
+@When(u'the developer clicks on fourth check box')
+def click_checkbox_4(context):
+    context.checkbox.checkbox_4().click()
+
+
 @Then(u'the button text changes')
 def button_text_change(context):
-    element = WebDriverWait(context.driver, 3).until(expected_conditions.text_to_be_present_in_element((By.ID, "check1")
-                                                                                                       , "Uncheck All"))
+    element = WebDriverWait(context.driver, 3).until(expected_conditions.text_to_be_present_in_element_value(
+        (By.ID, "check1"), "Uncheck All"))

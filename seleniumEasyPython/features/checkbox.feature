@@ -11,5 +11,6 @@ Feature: Practice using selenium with the demo selenium easy website
     When the developer clicks on first check box
     When the developer clicks on second check box
     When the developer clicks on third check box
+    When the developer clicks on fourth check box
     Then the button text changes
 
