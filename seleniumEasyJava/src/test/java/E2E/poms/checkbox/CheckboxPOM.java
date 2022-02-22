@@ -27,4 +27,5 @@ public class CheckboxPOM {
 
     @FindBy(id = "check1")
     public WebElement checkboxButton;
+
 }
