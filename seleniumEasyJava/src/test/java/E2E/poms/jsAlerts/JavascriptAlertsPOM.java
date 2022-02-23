@@ -19,5 +19,22 @@ public class JavascriptAlertsPOM {
     @FindBy(xpath = "//*[@id='easycont']/div/div[2]/div[1]/div[2]/button")
     public WebElement alertTriggerButton;
 
-    
+    // ------------------- Confirm Box --------------------------------
+
+    @FindBy(xpath = "//*[@id=\"easycount\"]/div/div[2]/div[2]/div[2]/button")
+    public WebElement confirmTriggerButton;
+
+    @FindBy(id = "confirm-demo")
+    public WebElement confirmSuccessMessage;
+
+    // ------------------- Prompt Box --------------------------------
+
+    @FindBy(xpath = "//button[@onclick=\"myPromptFunction()\"]")
+    public WebElement promptTriggerButton;
+
+    @FindBy(id = "prompt-demo")
+    public WebElement promptSuccessMessage;
+
+
+
 }
