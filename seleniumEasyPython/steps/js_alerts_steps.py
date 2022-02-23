@@ -1,23 +1,26 @@
 from behave import Given, When, Then
+from selenium.webdriver.support import wait, expected_conditions
 
 
 @Given(u'the developer is on the javascript alert demo selenium easy website')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Given the developer is on the javascript alert demo selenium easy website')
+def get_website(context):
+    context.driver.get('https://demo.seleniumeasy.com/javascript-alert-box-demo.html')
 
 
 @When(u'the developer clicks on the button to display an alert box')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When the developer clicks on the button to display an alert box')
+def trigger_alert(context):
+    context.js_alert.alert_trigger_button().click()
 
 
 @Then(u'a javascript alert should pop up at the top of the page')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Then a javascript alert should pop up at the top of the page')
+def alert_message(context):
+    alert = wait.until(expected_conditions.alert_is_present())
+
+    assert alert.text == "I am an alert box!"
 
 
 @Given(u'the previous alert is closed')
-def step_impl(context):
+def close_alert(context):
     raise NotImplementedError(u'STEP: Given the previous alert is closed')
 
 
