@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class dynamicData {
+public class dynamicDataSteps {
     @Given("the developer is on the dynamic data demo selenium easy website")
     public void theDeveloperIsOnTheDynamicDataDemoSeleniumEasyWebsite() {
     }
