@@ -20,4 +20,3 @@ Feature: Practice using selenium with the demo selenium easy website
     And the developer enters a name
     And the developer clicks on the ok button
     Then the name should be displayed on the page
-    

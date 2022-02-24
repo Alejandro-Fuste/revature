@@ -18,9 +18,9 @@ class DynamicDataPOM:
         return element
 
     def first_name(self):
-        element: WebElement = self.driver.find_element(By.XPATH, '//*[@id="loading"]/text()[1]')
+        element: WebElement = self.driver.find_element(By.ID, "loading")
         return element
 
     def last_name(self):
-        element: WebElement= self.driver.find_element(By.XPATH, '//*[@id="loading"]/text()[2]')
+        element: WebElement = self.driver.find_element(By.ID, "loading")
         return element

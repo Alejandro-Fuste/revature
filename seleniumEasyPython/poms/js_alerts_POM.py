@@ -16,7 +16,7 @@ class JavascriptAlertsPOM:
     # ------------------- Confirm Box --------------------------------
 
     def confirm_trigger_button(self):
-        element: WebElement = self.driver.find_element(By.XPATH, '//*[@id="easycount"]/div/div[2]/div[2]/div[2]/button')
+        element: WebElement = self.driver.find_element(By.XPATH, '//*[@onclick="myConfirmFunction()"]')
         return element
 
     def confirm_success_message(self):
@@ -31,3 +31,4 @@ class JavascriptAlertsPOM:
 
     def prompt_success_message(self):
         element: WebElement = self.driver.find_element(By.ID, 'prompt-demo')
+        return element

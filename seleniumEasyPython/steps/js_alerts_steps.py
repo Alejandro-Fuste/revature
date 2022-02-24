@@ -1,6 +1,7 @@
 from behave import Given, When, Then
 from selenium.webdriver.common.alert import Alert
-from selenium.webdriver.support import wait, expected_conditions
+from selenium.webdriver.support import  expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 # ------------------- Alert Box --------------------------------
@@ -16,13 +17,13 @@ def trigger_alert(context):
 
 @Then(u'a javascript alert should pop up at the top of the page')
 def alert_message(context):
-    alert = wait.until(expected_conditions.alert_is_present())
+    alert = WebDriverWait(context.driver, 3).until(expected_conditions.alert_is_present())
     assert alert.text == "I am an alert box!"
 
 
 @Then(u'the alert is closed')
 def close_alert(context):
-    alert = wait.until(expected_conditions.alert_is_present())
+    alert = WebDriverWait(context.driver, 3).until(expected_conditions.alert_is_present())
     alert.accept()
 
 
@@ -35,7 +36,7 @@ def trigger_confirm(context):
 
 @When(u'the developer clicks the ok button')
 def close_confirm(context):
-    wait.until(expected_conditions.alert_is_present())
+    WebDriverWait(context.driver, 3).until(expected_conditions.alert_is_present())
     alert = context.driver.switch_to.alert
     alert.accept()
 
@@ -55,7 +56,7 @@ def trigger_prompt(context):
 
 @When(u'the developer enters a name')
 def enter_name(context):
-    wait.until(expected_conditions.alert_is_present())
+    WebDriverWait(context.driver, 3).until(expected_conditions.alert_is_present())
     alert = Alert(context.driver)
     alert.send_keys("Luke Skywalker Fuste")
 
@@ -69,4 +70,4 @@ def step_impl(context):
 @Then(u'the name should be displayed on the page')
 def step_impl(context):
     message = context.js_alert.prompt_success_message()
-    assert message.text == "Luke Skywalker Fuste"
+    assert message.text == "You have entered 'Luke Skywalker Fuste' !"

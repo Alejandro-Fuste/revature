@@ -17,7 +17,7 @@ def before_all(context: Context):
     context.dynamic_data = DynamicDataPOM(context.driver)
 
     # ------------ wait and maximize window ------------
-    context.driver.implicitly_wait(2)
+    # context.driver.implicitly_wait(3)
     context.driver.maximize_window()
 
 

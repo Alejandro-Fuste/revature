@@ -50,3 +50,4 @@ def click_checkbox_4(context):
 def button_text_change(context):
     element = WebDriverWait(context.driver, 3).until(expected_conditions.text_to_be_present_in_element_value(
         (By.ID, "check1"), "Uncheck All"))
+    assert element
