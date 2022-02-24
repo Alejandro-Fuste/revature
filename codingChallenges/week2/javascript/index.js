@@ -1,12 +1,14 @@
 const colorPatternTimes = (array) => {
-  // initialize variables for counter and array size
-  let colorTime = array.length * 2;
-  let counter = 0;
+  // initialize variables for counter and color time
+  let [colorTime, switchTime] = [array.length * 2, 0];
 
-  // loop w/ condition
+  // loop to get number of color changes
+  for (i = 1; i < array.length; i++) {
+    if (array[i - 1] !== array[i] && array.length > 1) switchTime++;
+  }
 
   // return switches + color time
-  return colorTime;
+  return switchTime + colorTime;
 };
 
 console.log(colorPatternTimes(["Blue"])); // -> 2
