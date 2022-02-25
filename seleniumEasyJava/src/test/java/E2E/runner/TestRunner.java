@@ -4,6 +4,7 @@ import E2E.poms.simpleInput.SimpleInputPOM;
 import E2E.poms.checkbox.CheckboxPOM;
 import E2E.poms.jsAlerts.JavascriptAlertsPOM;
 import E2E.poms.dynamicData.DynamicDataPOM;
+import E2E.poms.progressBar.ProgressBarPOM;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -30,6 +31,7 @@ public class TestRunner {
     public static CheckboxPOM checkboxPage;
     public static JavascriptAlertsPOM javascriptAlertsPage;
     public static DynamicDataPOM dynamicDataPage;
+    public static ProgressBarPOM progressBarPage;
 
     @BeforeClass
     public static void setup() {
@@ -43,6 +45,7 @@ public class TestRunner {
         checkboxPage = new CheckboxPOM(driver);
         javascriptAlertsPage = new JavascriptAlertsPOM(driver);
         dynamicDataPage = new DynamicDataPOM(driver);
+        progressBarPage = new ProgressBarPOM(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(3));

@@ -15,7 +15,7 @@ public class ProgressBarSteps {
 
     @When("the developer clicks on the download button")
     public void theDeveloperClicksOnTheDownloadButton() {
-//        TestRunner.
+        TestRunner.progressBarPage.downloadButton.click();
     }
 
     @Then("the developer will see a 100% percentage on the page when the download completes")
