@@ -21,7 +21,7 @@ public class JavascriptAlertsPOM {
 
     // ------------------- Confirm Box --------------------------------
 
-    @FindBy(xpath = "//*[@id=\"easycount\"]/div/div[2]/div[2]/div[2]/button")
+    @FindBy(xpath = "//*[@id=\"easycont\"]/div/div[2]/div[2]/div[2]/button")
     public WebElement confirmTriggerButton;
 
     @FindBy(id = "confirm-demo")

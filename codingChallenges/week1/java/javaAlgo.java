@@ -2,7 +2,7 @@ package algo.week1;
 
 import java.text.DecimalFormat;
 
-public class JavaAlgo {
+class JavaAlgo {
     public void actualMemorySize(String size){
         double percentage = 0.07;
 
@@ -26,17 +26,22 @@ public class JavaAlgo {
     }
 
     public static void main(String[] args) {
-        JavaAlgo case1 = new JavaAlgo();
-        case1.actualMemorySize("32GB"); // "29.76GB"
+//        JavaAlgo case1 = new JavaAlgo();
+//        case1.actualMemorySize("32GB"); // "29.76GB"
+//
+//        System.out.println("----------");
+//
+//        JavaAlgo case2 = new JavaAlgo();
+//        case2.actualMemorySize("2GB"); // "1.86GB"
+//
+//        System.out.println("----------");
+//
+//        JavaAlgo case3 = new JavaAlgo();
+//        case3.actualMemorySize("512MB"); // "476MB"
 
-        System.out.println("----------");
-
-        JavaAlgo case2 = new JavaAlgo();
-        case2.actualMemorySize("2GB"); // "1.86GB"
-
-        System.out.println("----------");
-
-        JavaAlgo case3 = new JavaAlgo();
-        case3.actualMemorySize("512MB"); // "476MB"
+        String test = "First Name : ";
+        String test2 = "Last Name : ";
+        System.out.println(test.length());
+        System.out.println(test2.length());
     }
 }

@@ -22,9 +22,7 @@ public class DynamicDataPOM {
     @FindBy(xpath = "//*[contains(@src, 'https://randomuser.me/')]")
     public WebElement profileImage;
 
-    @FindBy(xpath = "//*[@id='loading']/text()[1]")
-    public WebElement firstName;
+    @FindBy(id = "loading")
+    public WebElement name;
 
-    @FindBy(xpath = "//*[@id='loading']/text()[2]")
-    public WebElement lastName;
 }
