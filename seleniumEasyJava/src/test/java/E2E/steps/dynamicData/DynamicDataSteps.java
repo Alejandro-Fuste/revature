@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-public class dynamicDataSteps {
+public class DynamicDataSteps {
     @Given("the developer is on the dynamic data demo selenium easy website")
     public void theDeveloperIsOnTheDynamicDataDemoSeleniumEasyWebsite() {
         TestRunner.driver.get("https://demo.seleniumeasy.com/dynamic-data-loading-demo.html");
