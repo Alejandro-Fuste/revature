@@ -10,8 +10,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -25,6 +28,7 @@ public class TestRunner {
     // declare variables
     public static WebDriver driver;
     public static WebDriverWait explicitWait;
+    public static Wait fluentWait;
 
     // POMS
     public static SimpleInputPOM simpleInputPage;
@@ -48,7 +52,11 @@ public class TestRunner {
         progressBarPage = new ProgressBarPOM(driver);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofSeconds(5))
+                .ignoring(NoSuchElementException.class);
         System.out.println("Set up complete!");
 
 
