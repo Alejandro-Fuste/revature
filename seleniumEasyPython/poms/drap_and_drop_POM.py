@@ -9,8 +9,8 @@ class DragAndDropPOM:
 
     # ------------------- Elements --------------------------------
 
-    def draggable_list(self):
-        element: WebElement = self.driver.find_element(By.ID, "todrag")
+    def draggable_elements(self):
+        element: WebElement = self.driver.find_elements(By.XPATH, '//span[@draggable="true"]')
         return element
 
     def drop_zone(self):
