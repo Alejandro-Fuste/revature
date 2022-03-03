@@ -1,3 +1,4 @@
+@SingleTest
 Feature: Practice using selenium with the demo selenium easy website
 
   Scenario: As a developer, I want to get practice testing a drag and drop demo

@@ -23,7 +23,7 @@ import java.io.File;
 import java.time.Duration;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features", glue = "E2E.steps", plugin = {"pretty",
+@CucumberOptions(features = "classpath:features", glue = "E2E.steps", tags = "@SingleTest", plugin = {"pretty",
         "html:src/test/resources/reports/html-reports.html"})
 
 public class TestRunner {
